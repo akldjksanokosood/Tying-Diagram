@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .txt_q1_yes {
+  position: absolute;
+  top: 32%;
+  left: 20.2%;
+  width: 4%;
+  height: 5%;
+  background-color: #555;
+  color: white;
+  text-align: center;
+}
+
+.container .txt_q1_no {
+  position: absolute;
+  top: 78%;
+  left: 20.2%;
+  width: 4%;
+  height: 5%;
+  background-color: #555;
+  color: white;
+  text-align: center;
+}
+
+.container .txt_q2_yes {
+  position: absolute;
+  top: 20.5%;
+  left: 35.6%;
+  width: 4%;
+  height: 5%;
+  background-color: #555;
+  color: white;
+  text-align: center;
+}
+
+.container .txt_q2_no {
+  position: absolute;
+  top: 43%;
+  left: 35.6%;
+  width: 4%;
+  height: 5%;
+  background-color: #555;
+  color: white;
+  text-align: center;
+}
+
+.container .txt_q3_yes {
+  position: absolute;
+  top: 66.5%;
+  left: 35.6%;
+  width: 4%;
+  height: 5%;
+  background-color: #555;
+  color: white;
+  text-align: center;
+}
+
+.container .txt_q3_no {
+  position: absolute;
+  top: 89%;
+  left: 35.6%;
+  width: 4%;
+  height: 5%;
+  background-color: #555;
+  color: white;
+  text-align: center;
+}
+
+.container .txt_q4_yes {
+  position: absolute;
+  top: 9%;
+  left: 56.35%;
+  width: 4%;
+  height: 5%;
+  background-color: #555;
+  color: white;
+  text-align: center;
+}
+
+.container .txt_q4_no {
+  position: absolute;
+  top: 32%;
+  left: 56.35%;
+  width: 4%;
+  height: 5%;
+  background-color: #555;
+  color: white;
+  text-align: center;
+}
+
+.container .txt_q5_yes {
+  position: absolute;
+  top: 55%;
+  left: 56.35%;
+  width: 4%;
+  height: 5%;
+  background-color: #555;
+  color: white;
+  text-align: center;
+}
+
+.container .txt_q5_no {
+  position: absolute;
+  top: 77%;
+  left: 56.35%;
+  width: 4%;
+  height: 5%;
+  background-color: #555;
+  color: white;
+  text-align: center;
+}
+
+.container .txt_q6_yes {
+  position: absolute;
+  top: 66%;
+  left: 78.5%;
+  width: 4%;
+  height: 5%;
+  background-color: #555;
+  color: white;
+  text-align: center;
+}
+
+.container .txt_q6_no {
+  position: absolute;
+  top: 88.5%;
+  left: 78.5%;
+  width: 4%;
+  height: 5%;
+  background-color: #555;
+  color: white;
+  text-align: center;
+}
+
+
+.container .label1 {
+  position: absolute;
+  top: 42%;
+  left: 53%;
+  width: 2%;
+  height: 5%;
+  color: blue;
+  text-align: center;
+}
+
+.container .label2 {
+  position: absolute;
+  top: 88%;
+  left: 53%;
+  width: 2%;
+  height: 5%;
+  color: blue;
+  text-align: center;
+}
+
+.container .label3 {
+  position: absolute;
+  top: 8%;
+  left: 74.8%;
+  width: 2%;
+  height: 5%;
+  color: blue;
+  text-align: center;
+}
+
+.container .label4 {
+  position: absolute;
+  top: 31%;
+  left: 74.8%;
+  width: 2%;
+  height: 5%;
+  color: blue;
+  text-align: center;
+}
+
+.container .label5 {
+  position: absolute;
+  top: 54%;
+  left: 74.8%;
+  width: 2%;
+  height: 5%;
+  color: blue;
+  text-align: center;
+}
+
+.container .label6 {
+  position: absolute;
+  top: 56%;
+  left: 97%;
+  width: 2%;
+  height: 5%;
+  color: blue;
+  text-align: center;
+}
+
+
+.container .label7 {
+  position: absolute;
+  top: 88%;
+  left: 97%;
+  width: 2%;
+  height: 5%;
+  color: blue;
+  text-align: center;
+}
+
+</style>
+</head>
+<body onload="update_all()">
+
+<div class="container">
+  <img src="Tying Diagram.drawio.svg" alt="Snow" style="width:100%">
+ 
+  <input class="txt_q1_yes" type="text" id="txt_q1_yes" name="txt_q1_yes" onchange="q1_yes_change()">
+  <input class="txt_q1_no" type="text" id="txt_q1_no" name="txt_q1_no" onchange="q1_no_change()">
+  <input class="txt_q2_yes" type="text" id="txt_q2_yes" name="txt_q2_yes" onchange="q2_yes_change()">
+  <input class="txt_q2_no" type="text" id="txt_q2_no" name="txt_q2_no" onchange="q2_no_change()">
+  <input class="txt_q3_yes" type="text" id="txt_q3_yes" name="txt_q3_yes" onchange="q3_yes_change()">
+  <input class="txt_q3_no" type="text" id="txt_q3_no" name="txt_q3_no" onchange="q3_no_change()">
+  <input class="txt_q4_yes" type="text" id="txt_q4_yes" name="txt_q4_yes" onchange="q4_yes_change()">
+  <input class="txt_q4_no" type="text" id="txt_q4_no" name="txt_q4_no" onchange="q4_no_change()">
+  <input class="txt_q5_yes" type="text" id="txt_q5_yes" name="txt_q5_yes" onchange="q5_yes_change()">
+  <input class="txt_q5_no" type="text" id="txt_q5_no" name="txt_q5_no" onchange="q5_no_change()">
+  <input class="txt_q6_yes" type="text" id="txt_q6_yes" name="txt_q6_yes" onchange="q6_yes_change()">
+  <input class="txt_q6_no" type="text" id="txt_q6_no" name="txt_q6_no" onchange="q6_no_change()">
+  
+  <label class="label1" for="label1" id="label1" name="label1">90</label>
+  <label class="label2" for="label2" id="label2" name="label2">90</label>
+  <label class="label3" for="label3" id="label3" name="label3">90</label>
+  <label class="label4" for="label4" id="label4" name="label4">90</label>
+  <label class="label5" for="label5" id="label5" name="label5">90</label>
+  <label class="label6" for="label6" id="label6" name="label6">60</label>
+  <label class="label7" for="label7" id="label7" name="label7">90</label>
+</div>
+<i>*Click ENTER or exit the text box after editing the values for the changes to take effect</i><br><br>
+Probability of Violation (sum of probabilities of red boxes):
+<label class="label_red" for="label_red" id="label_red" name="label_red">90</label>
+%
+
+<script>
+
+var p_a1 = 0.5;
+var p_a2 = 0.5;
+var p_a3 = 0.5;
+var p_a4 = 0.5;
+var p_a5 = 0.5;
+var p_a6 = 0.5;
+
+function update_all() {
+  document.getElementById("txt_q1_yes").value = Math.round(p_a1 * 100);
+  document.getElementById("txt_q2_yes").value = Math.round(p_a2 * 100);
+  document.getElementById("txt_q3_yes").value = Math.round(p_a3 * 100);
+  document.getElementById("txt_q4_yes").value = Math.round(p_a4 * 100);
+  document.getElementById("txt_q5_yes").value = Math.round(p_a5 * 100);
+  document.getElementById("txt_q6_yes").value = Math.round(p_a6 * 100);
+
+  document.getElementById("txt_q1_no").value = Math.round((1.0 - p_a1) * 100);
+  document.getElementById("txt_q2_no").value = Math.round((1.0 - p_a2) * 100);
+  document.getElementById("txt_q3_no").value = Math.round((1.0 - p_a3) * 100);
+  document.getElementById("txt_q4_no").value = Math.round((1.0 - p_a4) * 100);
+  document.getElementById("txt_q5_no").value = Math.round((1.0 - p_a5) * 100);
+  document.getElementById("txt_q6_no").value = Math.round((1.0 - p_a6) * 100);
+
+  var p_leaf_1 = p_a1 * (1.0 - p_a2);
+  var p_leaf_2 = (1.0 - p_a1) * (1.0 - p_a3);
+  var p_leaf_3 = p_a1 * p_a2 * p_a4;
+  var p_leaf_4 = p_a1 * p_a2 * (1.0 - p_a4);
+  var p_leaf_5 = (1.0 - p_a1) * p_a3 * p_a5;
+  var p_leaf_6 = (1.0 - p_a1) * p_a3 * (1.0 - p_a5) * p_a6;
+  var p_leaf_7 = (1.0 - p_a1) * p_a3 * (1.0 - p_a5) * (1.0 - p_a6);
+
+  document.getElementById("label1").innerHTML = Math.round(p_leaf_1 * 1000) / 10.0;
+  document.getElementById("label2").innerHTML = Math.round(p_leaf_2 * 1000) / 10.0;
+  document.getElementById("label3").innerHTML = Math.round(p_leaf_3 * 1000) / 10.0;
+  document.getElementById("label4").innerHTML = Math.round(p_leaf_4 * 1000) / 10.0;
+  document.getElementById("label5").innerHTML = Math.round(p_leaf_5 * 1000) / 10.0;
+  document.getElementById("label6").innerHTML = Math.round(p_leaf_6 * 1000) / 10.0;
+  document.getElementById("label7").innerHTML = Math.round(p_leaf_7 * 1000) / 10.0;
+
+  var p_red = p_leaf_3 + p_leaf_6;
+  document.getElementById("label_red").innerHTML = Math.round(p_red * 1000) / 10.0;
+}
+
+function q1_yes_change() {
+  p_a1 = parseFloat(document.getElementById("txt_q1_yes").value) / 100.0;
+  update_all();
+}
+
+function q2_yes_change() {
+  p_a2 = parseFloat(document.getElementById("txt_q2_yes").value) / 100.0;
+  update_all();
+}
+
+function q3_yes_change() {
+  p_a3 = parseFloat(document.getElementById("txt_q3_yes").value) / 100.0;
+  update_all();
+}
+
+function q4_yes_change() {
+  p_a4 = parseFloat(document.getElementById("txt_q4_yes").value) / 100.0;
+  update_all();
+}
+
+function q5_yes_change() {
+  p_a5 = parseFloat(document.getElementById("txt_q5_yes").value) / 100.0;
+  update_all();
+}
+
+function q6_yes_change() {
+  p_a6 = parseFloat(document.getElementById("txt_q6_yes").value) / 100.0;
+  update_all();
+}
+
+function q1_no_change() {
+  p_a1 = 1.0 - parseFloat(document.getElementById("txt_q1_no").value) / 100.0;
+  update_all();
+}
+
+function q2_no_change() {
+  p_a2 = 1.0 - parseFloat(document.getElementById("txt_q2_no").value) / 100.0;
+  update_all();
+}
+
+function q3_no_change() {
+  p_a3 = 1.0 - parseFloat(document.getElementById("txt_q3_no").value) / 100.0;
+  update_all();
+}
+
+function q4_no_change() {
+  p_a4 = 1.0 - parseFloat(document.getElementById("txt_q4_no").value) / 100.0;
+  update_all();
+}
+
+function q5_no_change() {
+  p_a5 = 1.0 - parseFloat(document.getElementById("txt_q5_no").value) / 100.0;
+  update_all();
+}
+
+function q6_no_change() {
+  p_a6 = 1.0 - parseFloat(document.getElementById("txt_q6_no").value) / 100.0;
+  update_all();
+}
+
+
+</script>
+</body>
+</html>
